@@ -7,3 +7,16 @@ export const SUCCESS = {
 export const FAILURE = {
   type: ACTION_TYPES.FAILURE,
 }
+
+// setting up action creators
+export const success = () => {
+  return {
+    type: ACTION_TYPES.SUCCESS,
+  };
+};
+
+export const failure = () => {
+  return {
+    type: ACTION_TYPES.FAILURE,
+  };
+};
