@@ -1,10 +1,9 @@
 import React from 'react';
+import Container1 from './containers/container1';
 
 class App extends React.Component {
   render() {
-    return {
-
-    };
+    return <Container1 />;
   }
 };
 
