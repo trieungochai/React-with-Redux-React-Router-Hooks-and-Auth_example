@@ -10,14 +10,14 @@ class Container1 extends React.Component {
 
     return (
       <div>
-        <button onClick={() => console.log(this.props.stateProp1, this.props.user_text)}> Get State </button>
+        <button onClick={() => console.log(this.props.stateProp1, this.props.userInput)}> Get State </button>
         <button onClick={() => this.props.action1()}> Dispatch Action 1 </button>
         <button onClick={() => this.props.action2()}> Dispatch Action 2 </button>
         <button onClick={() => this.props.action_creator1()}> Dispatch Action Creator 1 </button>
         <button onClick={() => this.props.action_creator2()}> Dispatch Action Creator 2 </button>
         <button onClick={() => this.props.action_creator3(user_text)}> Dispatch Action Creator 3 </button>
         {this.props.stateProp1
-          ? <h1>{this.props.user_text}</h1>
+          ? <h1>{this.props.userInput}</h1>
           : null
         }
       </div>
@@ -27,8 +27,8 @@ class Container1 extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
-    stateProp1: state.stateProp1,
-    user_text: state.user_text,
+    stateProp1: state.reducer1.stateProp1,
+    userInput: state.userReducer.user_text,
   };
 };
 
